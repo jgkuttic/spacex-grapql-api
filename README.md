@@ -18,7 +18,7 @@ $ pipenv install -r requirements.txt
 ```
 4. Change directory to space_launch_api folder and load the JSON Launch data by running the following command
 ```bash
-python manage.py loaddata ../spacex_django_data.jso
+python manage.py loaddata ../spacex_django_data.json
 ```
 
 4. Run the server
