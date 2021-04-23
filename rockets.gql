@@ -1,0 +1,62 @@
+# ROCKET QUERIES/MUATIONS
+
+query getAllRockets{
+  allRockets {
+    id
+    rocketId
+    launchSet{
+      id
+      missionName
+    }
+  }
+}
+
+query getRocketByID{
+  rocket(id:2){
+    id
+    rocketId
+  	launchSet{
+      id
+      missionName
+      flightNumber
+    }
+  }
+}
+
+mutation createRocket {
+  createRocket(input: {
+    rocketId: "BFR-1",
+  }){
+    rocket{
+     	id
+    	rocketId
+      launchSet{
+        id
+        missionName
+        flightNumber
+      }
+    }
+  }
+}
+
+mutation updateRocket {
+  updateRocket(id: 5, input: {
+    
+  }){
+    rocket{
+     	id
+    	rocketId
+      launchSet{
+        id
+        missionName
+        flightNumber
+      }
+    }
+  }
+}
+
+mutation deleteRocket {
+  deleteRocket(id: 7){
+    ok
+  }
+}

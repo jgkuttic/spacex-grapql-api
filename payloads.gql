@@ -1,0 +1,70 @@
+# PAYLOAD QUERIES/MUTATIONS
+
+query getAllPayloads{
+  allPayloads{
+    id
+    payloadId
+    rocket{
+      id
+      rocketId
+    }
+    noradSet{
+      id
+      noradId
+    }
+  }
+}
+
+query getPayloadByID {
+  payload(id: 2){
+    id
+    payloadId
+    rocket{
+      id
+      rocketId
+    }
+    noradSet{
+      id
+      noradId
+    }
+  }
+}
+
+mutation updatePayload {
+  updatePayload(id: 3, input: {
+    payloadId: "Starklink 5",
+    rocketId: 3
+  }){
+    payload{
+      id
+      payloadId
+      rocket{
+        id
+        rocketId
+      }
+    }
+  }
+}
+
+mutation createPayload {
+  createPayload(input: {
+    payloadId: "test1",
+    rocketId: 4
+  })
+  {
+    payload{
+      id
+      payloadId
+      rocket{
+        id
+        rocketId
+      }
+    }
+  }
+}
+
+mutation deletePayload{
+  deletePayload(id: 5){
+    ok
+  }
+}

@@ -1,0 +1,67 @@
+# LAUNCH QUERIES/MUTATIONS
+
+query getLaunchSiteByID{
+  launchsite(id:3){
+    id
+    siteId
+    siteName
+    siteNameLong
+		launchSet{
+      missionName
+      flightNumber
+    }
+  }
+}
+
+query getAllLaunchesSites{
+  allLaunchsites {
+   	id
+    siteId
+    siteName
+    siteNameLong
+		launchSet{
+      missionName
+      flightNumber
+    }
+  }
+}
+
+mutation createLaunchSite {
+  createLaunchsite(input: {
+  	siteId: "test1",
+    siteName: "test1",
+    siteNameLong: "longtest1"
+})
+  	{
+      launchsite{
+        id
+        siteId
+        siteName
+        siteNameLong
+      }
+    }
+}
+
+
+
+mutation updateLaunchSite {
+  updateLaunchsite(id: 5, input: {
+    siteId: "test1",
+    siteName: "test1",
+    siteNameLong: "longtest1"
+  }){
+      launchsite{
+        id
+        siteId
+        siteName
+        siteNameLong
+      }
+  }
+}
+
+mutation deleteLaunchSite {
+  deleteLaunch(id: 8){
+    ok
+  }
+}
+

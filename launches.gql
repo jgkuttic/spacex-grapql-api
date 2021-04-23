@@ -1,0 +1,137 @@
+# LAUNCH QUERIES/MUTATIONS
+
+query getLaunchByID{
+  launch(id: 5){
+    id
+    launchSite{
+      id
+      siteId
+      siteName
+    }
+    launchSuccess
+    launchDateUnix
+    flightNumber
+    rocket{
+      id
+      rocketId
+    }
+  }
+}
+
+query getLaunchesByMissionName {
+  launchByMissionName(missionName: "Starlink 4"){
+    id
+    launchSite{
+      id
+      siteId
+      siteName
+    }
+    launchSuccess
+    launchDateUnix
+    flightNumber
+    rocket{
+      id
+      rocketId
+    }
+  }
+}
+
+query getAllLaunches{
+  allLaunches {
+    id
+    launchSite{
+      id
+      siteId
+      siteName
+    }
+    launchSuccess
+    launchDateUnix
+    missionName
+    flightNumber
+    rocket{
+      id
+      rocketId
+    }
+  }
+}
+
+query getLaunchesByUnixLaunchDate {
+  launchesByLaunchDateUnix(launchDateUnix: 1619121384) {
+    id
+    launchSite{
+      id
+      siteId
+      siteName
+    }
+    launchSuccess
+    launchDateUnix
+    missionName
+    flightNumber
+    rocket{
+      id
+      rocketId
+    }
+  }
+}
+
+mutation createLaunch {
+  createLaunch(input: {
+  rocketId:5, 
+  flightNumber: 97,
+  missionName: "Test Mission 2",
+  launchSuccess: true,
+  launchsiteId: 1,
+  launchDateUnix: 1619121384
+})
+  {
+    launch{
+      id
+      flightNumber
+      missionName
+      rocket{
+        id
+        rocketId
+      }
+      launchSite{
+        id
+        siteId
+        siteName
+      }
+      launchSuccess
+      launchDateUnix
+    }
+  }
+}
+
+
+mutation updateLaunch {
+  updateLaunch(id: 5, input: {
+    rocketId: 2,
+    launchSuccess: false,
+    launchsiteId: 3,
+    missionName: "test3"
+  }){
+  	launch{
+      id
+      flightNumber
+      missionName
+      rocket{
+        id
+        rocketId
+      }
+      launchSite{
+        id
+        siteId
+        siteName
+      }
+      launchSuccess
+      launchDateUnix
+    }
+  }
+}
+
+mutation deleteLaunch {
+  deleteLaunch(id: 8){
+    ok
+  }
+}

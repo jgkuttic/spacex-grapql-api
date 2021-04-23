@@ -1,0 +1,69 @@
+#NORAD QUERIES/MUTATIONS
+
+query getAllNorads{
+  allNorads {
+    id
+    noradId
+    payload{
+      id
+      payloadId
+      rocket{
+        id
+        rocketId
+      }
+    }
+  }
+}
+
+query getNoradByID{
+  norad(id:2){
+    id
+    noradId
+    payload{
+      id
+      payloadId
+      rocket{
+        id
+        rocketId
+      }
+    }
+  }
+}
+
+mutation createNorad {
+  createNorad(input: {
+    noradId: 23453
+    payloadId: 3
+  }){
+    norad{
+      id
+      noradId
+      payload{
+        id
+        payloadId
+      }
+    }
+  }
+}
+
+mutation updateNorad {
+  updateNorad(id: 5, input: {
+    noradId: 234234
+    payloadId: 3
+  }){
+    norad{
+      id
+      noradId
+      payload{
+        id
+        payloadId
+      }
+    }
+  }
+}
+
+mutation deleteNorad {
+  deleteNorad(id: 1){
+    ok
+  }
+}
