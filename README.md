@@ -16,10 +16,14 @@ $ pipenv shell
 ```bash
 $ pipenv install -r requirements.txt
 ```
+4. Change directory to space_launch_api folder and load the JSON Launch data by running the following command
+```bash
+python manage.py loaddata ../spacex_django_data.jso
+```
 
 4. Run the server
 ```bash
 $ python manage.py runserver
 ```
 
-5. Open your web browser to http://localhost:8000/graphql to access the graphql endpoint where you can make the queries/mutations listed in the *.gql files.
+5. Open your web browser to http://localhost:8000/graphql to access the graphql endpoint where you can make the queries/mutations listed in the spacex_graphql_queries folder.

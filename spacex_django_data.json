@@ -2,14 +2,16 @@
   "model": "api.norad",
   "pk": 1,
   "fields": {
-    "norad_id": []
+    "norad_id": [],
+    "payload": 1
     } 
   },
   {
     "model": "api.norad",
     "pk": 2,
     "fields": {
-      "norad_id": [45341]
+      "norad_id": [45341],
+      "payload": 2
     } 
   },
   {
@@ -22,15 +24,16 @@
         45207, 45208, 45209, 45210, 45211, 45212, 45213, 45214, 45215, 45216,
         45217, 45218, 45219, 45220, 45221, 45222, 45223, 45224, 45225, 45226,
         45227, 45228, 45229, 45230, 45231, 45232, 45233, 45234, 45235, 45236,
-        45237
-      ]
+        45237],
+        "payload": 3
     } 
   },
   {
     "model": "api.norad",
     "pk": 4,
     "fields": {
-      "norad_id": [72000]
+      "norad_id": [72000],
+      "payload": 4
     } 
   },
   {
@@ -38,7 +41,7 @@
     "pk": 1,
     "fields": {
       "payload_id": "Starlink 4",
-      "norad_id": 1
+      "rocket": 1
     }
   },
   {
@@ -46,7 +49,7 @@
     "pk": 2,
     "fields": {
       "payload_id": "CRS-20",
-      "norad_id": 2
+      "rocket": 2
     }
   },
   {
@@ -54,7 +57,7 @@
     "pk": 3,
     "fields": {
       "payload_id": "Starlink 5",
-      "norad_id": 3
+      "rocket": 3
     }
   },
   {
@@ -62,39 +65,35 @@
     "pk": 4,
     "fields": {
       "payload_id": "Starlink 6",
-      "norad_id": 4
+      "rocket": 4
     }
   },
   {
     "model": "api.rocket",
     "pk": 1,
     "fields": {
-      "rocket_id": "falcon9",
-      "payloads": 1
+      "rocket_id": "falcon9"
     }
   },
   {
     "model": "api.rocket",
     "pk": 2,
     "fields": {
-      "rocket_id": "falcon9",
-      "payloads": 2
+      "rocket_id": "falcon9"
     }
   },
   {
     "model": "api.rocket",
     "pk": 3,
     "fields": {
-      "rocket_id": "falcon9",
-      "payloads": 3
+      "rocket_id": "falcon9"
     }
   },
   {
     "model": "api.rocket",
     "pk": 4,
     "fields": {
-      "rocket_id": "falcon9",
-      "payloads": 4
+      "rocket_id": "falcon9"
     }
   },
   {
